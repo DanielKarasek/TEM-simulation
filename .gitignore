@@ -1,0 +1,39 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+/build-ICP-Desktop_Qt_5_15_2_MinGW_32_bit-Debug/*
+src/ICP.pro.user
+src/ICP.pro.user.7a3fe4d
+src/.qmake.stash 
+.qmake.stash 
+Makefile2
