@@ -17,7 +17,7 @@ Specimen:
 Načítání a ukládání:
 * Jak již bylo výše zmíněno, lze načíst matice paprsků a jejich intenzit (hodnoty 0-1, čtvercová matice), vzorek (hodnoty 0-1, čtvercová matice propustnosti) a mikroskop (soubor získaný uložením existující konfigurace v aplikaci). Aplikace neobsahuje žádné rozhraní pro vytváření paprsků ani vzorků, a proto není možné je uložit.
 
-Ukázka vzhledu aplikace s prázdným mikroskopem
+Ukázka vzhledu aplikace s prázdným mikroskopem - v pozadí je vidět na tabulce výsledek ray tracingu
 
 ![Base app view](https://github.com/DanielKarasek/TEM-simulation/blob/main/readme_imgs/basic_view.png)
 
