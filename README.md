@@ -2,8 +2,6 @@
 ## Popis
 Projekt simuluje TEM mikroskop se vstupem kolineárního souboru paprsků pomocí série čoček aproximovaných paraxialní optikou (předpoklad nízkého uhlu dopadu). Umí simulovat jak průběh celého vstupního svazku tak i průběh pro jednotlivé paprsky (ray-tracing). Celý projekt je dělán v jednotkách centimetrů. 
 
-Matice vzorků, paprsků a celá konfigurace mikroskopu lze načítat ze souborů. Matice vzorku jsou čísla od 0 do 1 značící propustnost (0&nbsp;-&nbsp;paprsek je plně potlačen, 1&nbsp;-&nbsp;propuštěn). Matice parpsků jsou čísla od 0 do 1 reprezentující intenzitu (víc == víc přirozeně). Počet prvků v těchto maticích musí být odmocnitelný na celé číslo. Tedy musí jít o matici reprezentovatelnou jako čtvercová, i když je zapsána na jednom řádku - v opačném případě je vzato jen tolik prvků aby z nich šel vytvořit čtverec. Příkladem jsou soubory raySetting a specimenSettings v složce examples. Soubor konfigurace mikroskopu lze získat pouze uložením konfigurace vytvořené v aplikaci (nepoužíváme boost pickle, takže to je plain text, ale příliš komplikovaný). 
-
 Optické jevy způsobené posuny čoček při zobrazení paprsků aproximujeme natočením kužele, což může při akumulaci čoček nenulovou hodnotou posuvu vést k zvláštně vypadajícímu mikroskopu - zde jsme omezení nedostatkem složitějších tvarů než je kužel nebo natočený kužel. 
 
 Občas dochází k nevykreslení kužele nebo vykreslení čoček před ostatními předměty což vede k jejich neviditelnosti. Problém pochazí ze způsobu, kterým QT vykresluje. Experimentoval jsem z různými strategiemi vykreslení (od zadu do  předu a naopak dle hloubky, sekvenčně dle přidáváni objektů etc.) i jejich konfigurací, ale to nevedlo k žádné změně (z nějakého důvodu někdy alpha, i když byla užita pro všechny prvky stejná vertex shading a fragment shading strategie, nefunguje jako průhlednost a jindy ano). Při další změně mikroskopu problém někdy(!) zmizí (např. 2 zmáčknutí apply u změny čočky - zůstane stejná ale zbavíme se chyby, tbh QT 3D mě dost mate).
@@ -27,7 +25,7 @@ Specimen:
 * U vzorku lze nastavit jeho rotace, absolutní velikost a vzdálenost od detektoru. Relativní velikost je dána maticí vzorku. Ta musí být načtena ze souboru
 
 Načítání a ukládání:
-* Jak již bylo výše zmíněno, lze načíst matice paprsků (hodnoty 0-1, čtvercová matice intenzit), vzorek (hodnoty 0-1, čtvercová matice propustnosti) a mikroskop (soubor získaný uložením existující konfigurace v aplikaci). Aplikace neobsahuje žádné rozhraní pro vytváření paprsků ani vzorků, a proto není možné je uložit.
+* Matice vzorků, paprsků a celá konfigurace mikroskopu lze načítat ze souborů. Matice vzorku jsou čísla od 0 do 1 značící propustnost (0&nbsp;-&nbsp;paprsek je plně potlačen, 1&nbsp;-&nbsp;propuštěn). Matice parpsků jsou čísla od 0 do 1 reprezentující intenzitu (víc == víc přirozeně). Počet prvků v těchto maticích musí být odmocnitelný na celé číslo. Tedy musí jít o matici reprezentovatelnou jako čtvercová, i když je zapsána na jednom řádku - v opačném případě je vzato jen tolik prvků aby z nich šel vytvořit čtverec. Příkladem jsou soubory raySetting a specimenSettings v složce examples. Soubor konfigurace mikroskopu lze získat pouze uložením konfigurace vytvořené v aplikaci (nepoužíváme boost pickle, takže to je plain text, ale příliš komplikovaný). 
 
 Ukázka vzhledu aplikace s prázdným mikroskopem - v pozadí je vidět na tabulce výsledek ray tracingu
 
