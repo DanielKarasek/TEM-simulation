@@ -1,0 +1,12 @@
+# TEM simulátor
+Projekt simuluje TEM mikroskop se vstupem kolineárního souboru paprsků pomocí série čoček aproximovaných paraxialní optikou (předpoklad nízkého uhlu dopadu). Umí simulovat jak průběh celého vstupního svazku tak i průběh pro jednotlivé paprsky (ray-tracing). Celý projekt je dělán v jednotkách centimetrů. Matice vzorků, paprsků a celá konfigurace mikroskopu lze načítat ze souborů. Matice vzorků značící jsou čísla od 0 do 1 značící propustnost (0&nbsp;-&nbsp;paprsek je plně potlačen, 1&nbsp;-&nbsp;propuštěn). Matice parpsků jsou čísla od 0 do 1 reprezentující intenzitu (víc == víc přirozeně). Počet prvků v těchto maticích musí být odmocnitelný na celé číslo. Tedy musí jít o matici reprezentovatelnou jak čtvercová i když je zapsána na jednom řádku - v opačném případě je vzato jen tolik prvků aby z nich šel vytvořit čtverec. Příkladem jsou soubory raySetting a specimenSettings v složce examples. Soubor konfigurace mikroskopu lze získat pouze uložením konfigurace vytvořené v aplikaci (nepoužíváme boost pickle, takže to je plain text, ale příliš komplikovaný). Optické jevy způsobené posuny čoček při zobrazení paprsků aproximujeme natočením kužele, což může při akumulaci čoček s extrémní hodnotou posuvu (nebo decentní, ale v bodě kdy je paprsek úzký) vést k zvláštně vypadajícímu mikroskopu - zde sme omezení nedostatkem složitějších tvarů než je kužel nebo taočený kužel. Občas dochází k nevykreslení kužele nebo vykreslení čoček před ostatními předměty což vede k jejich neviditelnosti. Problém pochazí ze způsobu, kterým QT vykresluje (experimentovali ovali sme z na). Při další změně mikroskopu by měl problém zmizet. V GUI se nevypisuje pozice průchodu vzorkem a detektorem ani průměr svazku. Ovládáni probíhá šipkami a myší. Kolečko pro vzdálenost a levé tlačítko a pohyb myší pro rotaci.
+
+Předpoklady:
+Předpokládáme verzi QT 5.15.2 jelikož ve verzi 5.5.1 neexistuje tvar kužele který je základním kamenem mikroskopu.
+
+Příklady:
+V examples se nachází 5 různých konfigurací s paprsky dopadajicími na detektor (setting1,2...). 
+Tyto konfigurace byli vytvořeny expertem z firmy Thermo Fisher, ačkoliv nejsou plně realistické, jelikož skutečné zvětšení
+by vypadalo v takovémto projektu nepřehledně. V příkladech 4 a 5 jsou ukázky odchylky (simulace vad mikroskopu). V ukázce 5
+je vidět i výše zmíněný zvláštní vzhled mikroskopu, protože odchylka vzniká v bodě kdy je paprsek malý, a proto se tato vada zvětší.
+
