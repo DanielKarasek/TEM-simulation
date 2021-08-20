@@ -18,7 +18,7 @@ Scene::Scene()
     hLayout->addWidget(container, 1);
     hLayout->addLayout(vLayout);
 
-    widget->setWindowTitle(QStringLiteral("MicroscopeBitchboi"));
+    widget->setWindowTitle(QStringLiteral("TEM microscope simulation"));
 
     // Root entity
     m_rootEntity = new Qt3DCore::QEntity();

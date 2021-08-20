@@ -56,7 +56,7 @@
 using std::string;
 /*!
  * \brief Třída pro View
- * \author Filip Osvald, xosval04
+ * \author Daniel Karásek xkaras38, Filip Osvald, xosval04
  * \details
  * <a href="classScene.html">Scéna</a>
  * Třída reprezentující View. Umožňuje uživateli zadávat změny pro mikroskop v uživatelském rozhraní. Obsahuje sloty a signály komunikující s třídou  Presenter pro aplikování změn

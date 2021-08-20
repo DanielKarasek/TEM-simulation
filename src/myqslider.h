@@ -9,7 +9,7 @@
 
 /*!
  * \brief Třída pro vlastní QSlider.
- * \author Filip Osvald, xosval04
+ * \author Daniel Karásek xkaras38, Filip Osvald, xosval04
  * \details
  * <a href="classMyQSlider.html">Scéna</a>
  * Je podtřídou QSlider. Umožňuje vytvořit vlastní metody pro slider. Tyto metody nastavují minimum a maximum slideru v hodnotach double přepočítané na int.
