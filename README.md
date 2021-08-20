@@ -18,7 +18,7 @@ Načítání a ukládání:
 * Jak již bylo výše zmíněno, lze načíst matice paprsků a jejich intenzit (hodnoty 0-1, čtvercová matice), vzorek (hodnoty 0-1, čtvercová matice propustnosti) a mikroskop (soubor získaný uložením existující konfigurace v aplikaci). Aplikace neobsahuje žádné rozhraní pro vytváření paprsků ani vzorků, a proto není možné je uložit.
 
 Ukázka vzhledu aplikace s prázdným mikroskopem
-![zakladni view](https://github.com/DanielKarasek/TEM-simulation/tree/main/readme_imgs/basic_view.png)
+![Base app view](https://github.com/DanielKarasek/vision_project/blob/main/doc_images/base_view_screenshot.png)
 
 ## Příklady - ukázky
 V examples se nachází 5 různých konfigurací s paprsky dopadajicími na detektor (setting1,2...). 
