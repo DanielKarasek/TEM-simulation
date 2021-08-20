@@ -27,7 +27,7 @@ Specimen:
 * U vzorku lze nastavit jeho rotace, absolutní velikost a vzdálenost od detektoru. Relativní velikost je dána maticí vzorku. Ta musí být načtena ze souboru
 
 Načítání a ukládání:
-* Jak již bylo výše zmíněno, lze načíst matice paprsků a jejich intenzit (hodnoty 0-1, čtvercová matice), vzorek (hodnoty 0-1, čtvercová matice propustnosti) a mikroskop (soubor získaný uložením existující konfigurace v aplikaci). Aplikace neobsahuje žádné rozhraní pro vytváření paprsků ani vzorků, a proto není možné je uložit.
+* Jak již bylo výše zmíněno, lze načíst matice paprsků (hodnoty 0-1, čtvercová matice intenzit), vzorek (hodnoty 0-1, čtvercová matice propustnosti) a mikroskop (soubor získaný uložením existující konfigurace v aplikaci). Aplikace neobsahuje žádné rozhraní pro vytváření paprsků ani vzorků, a proto není možné je uložit.
 
 Ukázka vzhledu aplikace s prázdným mikroskopem - v pozadí je vidět na tabulce výsledek ray tracingu
 
