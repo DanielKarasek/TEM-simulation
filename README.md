@@ -18,17 +18,20 @@ Načítání a ukládání:
 * Jak již bylo výše zmíněno, lze načíst matice paprsků a jejich intenzit (hodnoty 0-1, čtvercová matice), vzorek (hodnoty 0-1, čtvercová matice propustnosti) a mikroskop (soubor získaný uložením existující konfigurace v aplikaci). Aplikace neobsahuje žádné rozhraní pro vytváření paprsků ani vzorků, a proto není možné je uložit.
 
 Ukázka vzhledu aplikace s prázdným mikroskopem
-![Base app view](https://github.com/DanielKarasek/vision_project/blob/main/doc_images/base_view_screenshot.png)
+
+![Base app view](https://github.com/DanielKarasek/TEM-simulation/blob/main/readme_imgs/basic_view.png)
 
 ## Příklady - ukázky
 V examples se nachází 5 různých konfigurací s paprsky dopadajicími na detektor (setting1,2...). 
 Tyto konfigurace byli vytvořeny expertem z firmy Thermo Fisher, ačkoliv nejsou plně realistické, mimo jiné proto že skutečné zvětšení by vypadalo v takovémto projektu nepřehledně. V příkladech 4 a 5 jsou ukázky odchylky (simulace vad mikroskopu). V ukázce 5 je vidět i výše zmíněný zvláštní vzhled mikroskopu, protože odchylka vzniká v bodě kdy je paprsek malý, a tato vada se zvětšením paprsku znásobí.
 
 Ukázka funkčního mirkoskopu z příkladu 1
-![Funkcni](https://github.com/DanielKarasek/TEM-simulation/tree/main/readme_imgs/working_settings.png)
+
+![Funkcni](https://github.com/DanielKarasek/TEM-simulation/blob/main/readme_imgs/working_settings.png)
 
 Ukázka nefunkčního mikroskopu z příkladu 5
-![Retardovany](https://github.com/DanielKarasek/TEM-simulation/tree/main/readme_imgs/settings_with_err.png)
+
+![Retardovany](https://github.com/DanielKarasek/TEM-simulation/blob/main/readme_imgs/settings_with_err.png)
 
 ## Spuštění
 Aplikace vyžaduje qmake pro QT 5.15 (používali sme 5.15.2, ale minor verze by neměla vadit) a c++17. Aplikace je přeložená příkazem make v kořenovém souboru adresáře. Tímto je vygenerován spustitelný soubor TEM.
